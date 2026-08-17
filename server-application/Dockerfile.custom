@@ -1,0 +1,149 @@
+FROM registry.git.amazingcat.net/cattr/core/app:latest
+
+USER root
+
+# ── Backend: new PHP files ──────────────────────────────────────────────────
+COPY app/Http/Requests/Reports/SoftwareUsageReportRequest.php \
+     /app/app/Http/Requests/Reports/SoftwareUsageReportRequest.php
+
+COPY app/Http/Controllers/Api/Reports/SoftwareUsageReportController.php \
+     /app/app/Http/Controllers/Api/Reports/SoftwareUsageReportController.php
+
+COPY app/Reports/SoftwareUsageReportExport.php \
+     /app/app/Reports/SoftwareUsageReportExport.php
+
+COPY app/Http/Requests/Interval/TrackAppRequest.php \
+     /app/app/Http/Requests/Interval/TrackAppRequest.php
+
+COPY app/Models/TrackedApplication.php \
+     /app/app/Models/TrackedApplication.php
+
+COPY app/Support/TrackedApplicationJoin.php \
+     /app/app/Support/TrackedApplicationJoin.php
+
+COPY app/Jobs/AssignAppsToTimeInterval.php \
+     /app/app/Jobs/AssignAppsToTimeInterval.php
+
+# ── Shared report performance fixes ─────────────────────────────────────────
+COPY app/Helpers/ReportHelper.php \
+     /app/app/Helpers/ReportHelper.php
+
+COPY app/Http/Controllers/Api/Reports/DashboardController.php \
+     /app/app/Http/Controllers/Api/Reports/DashboardController.php
+
+COPY app/Reports/DashboardExport.php \
+     /app/app/Reports/DashboardExport.php
+
+COPY app/Reports/ProjectReportExport.php \
+     /app/app/Reports/ProjectReportExport.php
+
+COPY database/migrations/2026_06_02_000001_add_dashboard_performance_indexes.php \
+     /app/database/migrations/2026_06_02_000001_add_dashboard_performance_indexes.php
+
+# ── Top Programs Report ─────────────────────────────────────────────────────
+COPY app/Http/Requests/Reports/TopProgramsReportRequest.php \
+     /app/app/Http/Requests/Reports/TopProgramsReportRequest.php
+
+COPY app/Http/Controllers/Api/Reports/TopProgramsReportController.php \
+     /app/app/Http/Controllers/Api/Reports/TopProgramsReportController.php
+
+COPY app/Reports/TopProgramsReportExport.php \
+     /app/app/Reports/TopProgramsReportExport.php
+
+# ── Top Websites Report ─────────────────────────────────────────────────────
+COPY app/Http/Requests/Reports/TopWebsitesReportRequest.php \
+     /app/app/Http/Requests/Reports/TopWebsitesReportRequest.php
+
+COPY app/Http/Controllers/Api/Reports/TopWebsitesReportController.php \
+     /app/app/Http/Controllers/Api/Reports/TopWebsitesReportController.php
+
+COPY app/Reports/TopWebsitesReportExport.php \
+     /app/app/Reports/TopWebsitesReportExport.php
+
+# ── Dashboard Stats ─────────────────────────────────────────────────────────
+COPY app/Http/Requests/Reports/DashboardStatsRequest.php \
+     /app/app/Http/Requests/Reports/DashboardStatsRequest.php
+
+COPY app/Http/Controllers/Api/Reports/DashboardStatsController.php \
+     /app/app/Http/Controllers/Api/Reports/DashboardStatsController.php
+
+# ── Email Monitoring ────────────────────────────────────────────────────────
+COPY app/Http/Requests/Reports/EmailMonitoringReportRequest.php \
+     /app/app/Http/Requests/Reports/EmailMonitoringReportRequest.php
+
+COPY app/Http/Controllers/Api/Reports/EmailMonitoringReportController.php \
+     /app/app/Http/Controllers/Api/Reports/EmailMonitoringReportController.php
+
+COPY app/Http/Controllers/Api/EmailMonitoringController.php \
+     /app/app/Http/Controllers/Api/EmailMonitoringController.php
+
+COPY app/Models/MonitoredEmail.php \
+     /app/app/Models/MonitoredEmail.php
+
+COPY database/migrations/2026_05_05_100000_create_monitored_emails_table.php \
+     /app/database/migrations/2026_05_05_100000_create_monitored_emails_table.php
+
+# ── Shared route + seed files ───────────────────────────────────────────────
+COPY database/migrations/2026_04_02_120000_add_url_to_tracked_applications_table.php \
+     /app/database/migrations/2026_04_02_120000_add_url_to_tracked_applications_table.php
+
+COPY database/migrations/2026_05_14_000001_add_windows_username_to_users_table.php \
+     /app/database/migrations/2026_05_14_000001_add_windows_username_to_users_table.php
+
+COPY database/seeds/EnableAppMonitoringSeeder.php \
+     /app/database/seeds/EnableAppMonitoringSeeder.php
+
+COPY database/seeds/InitialSeeder.php \
+     /app/database/seeds/InitialSeeder.php
+
+COPY app/Http/Controllers/WindowsAuthController.php \
+     /app/app/Http/Controllers/WindowsAuthController.php
+
+COPY app/Http/Requests/Auth/WindowsLoginRequest.php \
+     /app/app/Http/Requests/Auth/WindowsLoginRequest.php
+
+COPY app/Services/MonitoringTaskProvisioner.php \
+     /app/app/Services/MonitoringTaskProvisioner.php
+
+COPY app/Http/Controllers/AuthController.php \
+     /app/app/Http/Controllers/AuthController.php
+
+COPY app/Models/User.php \
+     /app/app/Models/User.php
+
+COPY app/Http/Requests/User/CreateUserRequest.php \
+     /app/app/Http/Requests/User/CreateUserRequest.php
+
+COPY app/Http/Requests/User/EditUserRequest.php \
+     /app/app/Http/Requests/User/EditUserRequest.php
+
+COPY config/auth.php /app/config/auth.php
+
+COPY routes/api.php /app/routes/api.php
+
+# ── Branding ────────────────────────────────────────────────────────────────
+COPY resources/views/app.blade.php /app/resources/views/app.blade.php
+
+# ── Frontend: copy full compiled bundle set to keep chunks/manifests consistent ──
+COPY public/dist /app/public/dist
+COPY public/mix-manifest.json /app/public/mix-manifest.json
+COPY public/mix-sri.json /app/public/mix-sri.json
+
+# ── Disable authoritative classmap so newly-copied PHP classes are found via PSR-4 ──
+RUN sed -i 's/setClassMapAuthoritative(true)/setClassMapAuthoritative(false)/' \
+    /app/vendor/composer/autoload_real.php
+
+# ── Keep slow report requests from monopolizing the whole HTTP surface ───────
+RUN printf '%s\n' \
+    '#!/usr/bin/execlineb -P' \
+    '' \
+    'with-contenv' \
+    's6-setuidgid 10000:4' \
+    '' \
+    'php82 /app/artisan octane:start --host=127.0.0.1 --port=8090 --workers=4 --task-workers=2' \
+    > /etc/s6-overlay/s6-rc.d/laravel/run
+
+# ── Clear framework caches (routes, config) ─────────────────────────────────
+RUN cd /app && \
+     php82 artisan route:clear && \
+     php82 artisan config:clear

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 168" role="img" aria-labelledby="title desc">
+  <title id="title">Pin-Tracker</title>
+  <desc id="desc">Pin-Tracker wordmark with a brown pin mark and silver tracker line.</desc>
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f7f7"/>
+      <stop offset="0.42" stop-color="#b9b9b9"/>
+      <stop offset="0.72" stop-color="#8f9394"/>
+      <stop offset="1" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="0.55" stop-color="#d8d8d8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7f8283" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="168" fill="none"/>
+  <g transform="translate(28 0)">
+    <path fill="#5a3d34" d="M78 6c10 26 31 43 62 62 25 15 42 36 42 62 0 18-9 34-24 49 2-21-7-39-27-55-15-12-34-23-55-36-23-14-37-31-38-51C37 21 49 10 78 6z"/>
+    <path fill="#5a3d34" d="M62 72c13 18 29 31 49 45 24 17 36 40 35 68-1 24-11 48-29 72 2-39-5-68-22-89-11-14-27-27-48-41-14-10-21-21-19-34 1-10 7-28 18-54 4-10 8-19 10-26 3 20 10 38 34 55 10 7 23 16 34 27-9 11-22 16-36 14-12-2-22-10-31-24-3-4-8-1-5 4z"/>
+    <path fill="url(#silver)" d="M117 99c13 10 22 23 26 38 13-12 20-26 20-43-7 12-18 21-31 27-5-8-9-15-15-22z"/>
+    <path fill="url(#shine)" opacity=".72" d="M43 45c15 19 37 33 62 49 12 8 22 16 30 26 8-4 16-10 22-18-10-15-25-28-46-41-22-14-41-28-54-47-9 8-15 18-14 31z"/>
+  </g>
+  <g transform="translate(218 60)" fill="#8b8f90">
+    <path d="M0 56V6h52c20 0 31 10 31 25 0 16-11 25-31 25H15v30H0zm15-43v36h36c11 0 17-7 17-18s-6-18-17-18H15z"/>
+    <path d="M101 6h15v80h-15V6z"/>
+    <path d="M143 86V6h14l56 58V6h15v80h-14l-56-58v58h-15z"/>
+    <path d="M259 51V39h58v12h-58z"/>
+    <path d="M356 86V18h-33V6h81v12h-33v68h-15z"/>
+    <path d="M418 86V6h60c17 0 27 9 27 23 0 11-7 19-19 22l22 35h-17l-20-33h-38v33h-15zm15-45h43c9 0 14-5 14-12 0-8-5-12-14-12h-43v24z"/>
+    <path d="M518 86l42-80h15l42 80h-17l-10-19h-47l-10 19h-15zm32-32h33l-16-32-17 32z"/>
+  </g>
+  <g transform="translate(218 115)" fill="#8b8f90">
+    <path d="M6 42V0h10v42H6z"/>
+    <path d="M32 42V0h9l29 27V0h10v42h-9L42 15v27H32z"/>
+    <path d="M100 42V0h43v8h-33v9h27v8h-27v17h-10z"/>
+    <path d="M159 42V0h10v42h-10z"/>
+    <path d="M188 42V0h10v34h31v8h-41z"/>
+    <path d="M244 42V0h44v8h-34v8h29v8h-29v10h35v8h-45z"/>
+    <path d="M306 42V0h10v34h31v8h-41z"/>
+    <path d="M361 42V0h27c16 0 25 8 25 21s-9 21-25 21h-27zm10-8h17c10 0 15-5 15-13s-5-13-15-13h-17v26z"/>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "top-programs-report": "Top Programs"
+  },
+  "top-programs-report": {
+    "title": "Top Programs",
+    "filter_apps": "Search by app name or executable…",
+    "unique_programs": "Unique Programs",
+    "users_count": "Users",
+    "col_program": "Program Name",
+    "col_executable": "Executable",
+    "col_duration": "Duration (hh:mm:ss)",
+    "col_intervals": "Intervals",
+    "col_users": "Users"
+  }
+}

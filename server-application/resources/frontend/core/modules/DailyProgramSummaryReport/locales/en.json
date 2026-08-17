@@ -1,0 +1,19 @@
+{
+  "navigation": {
+    "daily-program-summary-report": "Daily Program Summary"
+  },
+  "daily-program-summary-report": {
+    "title": "Daily Program Summary",
+    "filter_apps": "Search by program or executable...",
+    "users_count": "Users",
+    "days_count": "Days",
+    "program_rows": "Program Rows",
+    "col_user": "User",
+    "col_email": "Email",
+    "col_date": "Date",
+    "col_program": "Program",
+    "col_executable": "Executable",
+    "col_duration": "Duration (hh:mm:ss)",
+    "col_intervals": "Intervals"
+  }
+}

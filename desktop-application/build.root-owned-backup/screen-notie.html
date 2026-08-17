@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PIN-Tracker</title>
+  <style>
+    @font-face {
+      font-family: 'ElementIcons';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('fonts/element-icons.woff') format('woff');
+    }
+
+    html {
+
+      margin: 0;
+      padding: 0;
+
+    }
+
+    body {
+      box-sizing: border-box;
+      color: #444;
+      display: flex;
+      font-family: "Roboto", "Segoe UI", Helvetica, sans-serif;
+      flex-flow: column nowrap;
+      height: 100%;
+      justify-content: center;
+      margin: 0;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+
+      -webkit-font-smoothing: subpixel-antialiased;
+      -webkit-user-select: none;
+      user-select: none;
+
+      background: #fff;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      backdrop-filter: contrast(0.85);
+      border: 2px solid #5A4DC5;
+
+    }
+
+    .label {
+      position: absolute;
+      top: .5em;
+      left: .5em;
+    }
+
+    .buttons {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: .5em;
+      border-bottom-left-radius: 5px;
+      background-color: #5A4DC5;
+    }
+
+    .btn {
+      background: none;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      font-family: 'ElementIcons';
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .btn-close:before {
+      content: "\e6db";
+    }
+
+    .btn-delete-tick:before {
+      content: "\e79c";
+      font-size: .9rem;
+    }
+
+    .btn-delete-bin:before {
+      content: "\e6d7";
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="buttons">
+    <button id="button-delete" class="btn btn-delete-bin" />
+    <button id="button-close" class="btn btn-close" />
+  </div>
+  <script>
+    const { ipcRenderer } = require('electron');
+    const IPCRouter = require('@amazingcat/electron-ipc-router');
+
+    const notificationRouter = new IPCRouter(ipcRenderer, 'screenshot-notie');
+
+    /**
+     * Properties of the assigned intevals
+     * @type {Object|null}
+     */
+    let windowInterval = null;
+
+    /**
+     * Notie duration in millis
+     * @type {Number|null}
+     */
+    let windowDuration = null;
+
+    let windowCloseTimer = null;
+
+    let windowClosing = false;
+
+    // Listener to handle delete request from FE
+    notificationRouter.serve('notification/screenshot', request => {
+
+      // Translate to DataURL
+      document
+        .querySelector('body')
+        .style['background-image'] = ''
+          .concat('url(\'data:image/jpeg;base64,')
+          .concat(request.packet.body.screenshot)
+          .concat('\')');
+
+      // Save screenshot id for possible delete
+      windowInterval = request.packet.body.interval;
+
+      // Display notification
+      notificationRouter.emit('notification/display', {});
+
+    });
+
+    // Listener to handle notification duration
+    notificationRouter.serve('notification/duration', async request => {
+
+      // Setting window close timer
+      windowDuration = request.packet.body.duration;
+      windowCloseTimer = setTimeout(() => window.close(), windowDuration);
+
+    });
+
+    // Main flow
+    document.addEventListener('DOMContentLoaded', () => {
+
+      document.querySelector('#button-close').addEventListener('click', () => {
+
+        if (!windowClosing) {
+
+          clearTimeout(windowCloseTimer);
+          window.close();
+
+        }
+
+      });
+
+      document.querySelector('#button-delete').addEventListener('click', e => {
+
+        if (!windowClosing) {
+
+          clearTimeout(windowCloseTimer);
+
+          if (windowInterval) {
+
+            notificationRouter.request('notification/delete', { interval: windowInterval });
+            windowInterval = null;
+
+            document.querySelector('#button-close').style.display = 'none';
+            e.target.classList.toggle('btn-delete-bin');
+            e.target.classList.toggle('btn-delete-tick');
+            e.target.style.opacity = 1;
+
+            setTimeout(() => window.close(), 200);
+            return;
+
+          }
+
+          // Close notification
+          notificationRouter.emit('notification/destroy', {});
+
+        }
+
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.env
+.env.example
+**/node_modules/
+**/vendor/
+data/*
+!data/.gitkeep
+storage/*
+!storage/.gitkeep
+releases/windows/v1/old/PIN-Tracker-windows-installers.zip

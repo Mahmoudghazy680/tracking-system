@@ -1,0 +1,25 @@
+{
+  "navigation": {
+    "daily-employee-usage-report": "Daily Employee Usage"
+  },
+  "control": {
+    "task_selected": "No tasks selected | 1 task selected | {count} tasks selected",
+    "task_selected_all": "All tasks selected"
+  },
+  "daily-employee-usage-report": {
+    "title": "Daily Employee Usage",
+    "filter_search": "Search by application or domain...",
+    "users_count": "Users",
+    "days_count": "Days",
+    "activity_rows": "Activity Rows",
+    "top_employees": "Top Employee Usage",
+    "chart_hours": "Hours",
+    "type_program": "Program",
+    "type_website": "Website",
+    "col_date": "Date",
+    "col_type": "Type",
+    "col_activity": "Activity",
+    "col_duration": "Duration (hh:mm:ss)",
+    "col_intervals": "Intervals"
+  }
+}

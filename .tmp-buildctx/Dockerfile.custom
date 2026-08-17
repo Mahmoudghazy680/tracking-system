@@ -1,0 +1,44 @@
+FROM registry.git.amazingcat.net/cattr/core/app:latest
+
+USER root
+
+# ── Backend: new PHP files ──────────────────────────────────────────────────
+COPY app/Http/Requests/Reports/SoftwareUsageReportRequest.php \
+     /app/app/Http/Requests/Reports/SoftwareUsageReportRequest.php
+
+COPY app/Http/Controllers/Api/Reports/SoftwareUsageReportController.php \
+     /app/app/Http/Controllers/Api/Reports/SoftwareUsageReportController.php
+
+COPY app/Reports/SoftwareUsageReportExport.php \
+     /app/app/Reports/SoftwareUsageReportExport.php
+
+COPY app/Http/Requests/Interval/TrackAppRequest.php \
+     /app/app/Http/Requests/Interval/TrackAppRequest.php
+
+COPY app/Models/TrackedApplication.php \
+     /app/app/Models/TrackedApplication.php
+
+COPY database/migrations/2026_04_02_120000_add_url_to_tracked_applications_table.php \
+     /app/database/migrations/2026_04_02_120000_add_url_to_tracked_applications_table.php
+
+COPY routes/api.php /app/routes/api.php
+
+# ── Frontend: compiled assets (.gz excluded by .dockerignore, recreated below) ─
+COPY public/dist/app/report.softwareusage.js \
+     /app/public/dist/app/report.softwareusage.js
+COPY public/dist/app/report.softwareusage.js.br \
+     /app/public/dist/app/report.softwareusage.js.br
+COPY public/mix-manifest.json /app/public/mix-manifest.json
+# Replace main bundle and brotli variant (.gz recreated below)
+COPY public/dist/app.js    /app/public/dist/app.js
+COPY public/dist/app.js.br /app/public/dist/app.js.br
+
+# Recreate gzip compressed variants for nginx pre-compression serving
+RUN gzip -k -f /app/public/dist/app.js && \
+    gzip -k -f /app/public/dist/app/report.softwareusage.js
+
+# ── Clear framework caches (routes, config) ─────────────────────────────────
+RUN cd /app && \
+     php82 artisan route:clear && \
+     php82 artisan config:clear && \
+     php82 artisan cache:clear

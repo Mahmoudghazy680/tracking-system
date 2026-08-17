@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"chat.agent.maxRequests": 500
+	},
+	"launch": {
+		"configurations": [
+			{
+				"type": "chrome",
+				"name": "http://172.16.70.66/",
+				"request": "launch",
+				"url": "http://172.16.70.66/"
+			}
+		]
+	}
+}

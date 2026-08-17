@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "email-monitoring": "E-Mail"
+  },
+  "email-monitoring": {
+    "title": "Email Monitoring",
+    "filter_search": "Search by subject, from, or to…",
+    "direction_all": "All",
+    "direction_sent": "Sent",
+    "direction_received": "Received",
+    "col_from": "From",
+    "col_to": "To",
+    "col_subject": "Subject",
+    "col_attachment": "Attachment",
+    "col_datetime": "Date/Time",
+    "col_client": "Client",
+    "col_user": "User",
+    "body_preview": "Body Preview",
+    "no_subject": "(no subject)",
+    "no_data": "No email events found for the selected period."
+  }
+}

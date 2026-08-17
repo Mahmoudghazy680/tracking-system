@@ -1,0 +1,17 @@
+{
+  "navigation": {
+    "top-websites-report": "Top Websites"
+  },
+  "top-websites-report": {
+    "title": "Top Websites",
+    "filter_search": "Search by domain…",
+    "unique_domains": "Unique Domains",
+    "users_count": "Users",
+    "col_website": "Website",
+    "col_pageviews": "Pageviews",
+    "col_duration": "Duration (hh:mm:ss)",
+    "col_chart": "Chart",
+    "expand_urls": "Show full URLs",
+    "collapse_urls": "Hide URLs"
+  }
+}

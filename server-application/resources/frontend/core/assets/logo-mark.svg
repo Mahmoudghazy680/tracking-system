@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168 168" role="img" aria-labelledby="title desc">
+  <title id="title">Pin-Tracker mark</title>
+  <desc id="desc">A brown pin shaped mark with a silver inner highlight.</desc>
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f7f7"/>
+      <stop offset="0.42" stop-color="#b9b9b9"/>
+      <stop offset="0.72" stop-color="#8f9394"/>
+      <stop offset="1" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.75"/>
+      <stop offset="0.55" stop-color="#d8d8d8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7f8283" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+  <rect width="168" height="168" rx="28" fill="none"/>
+  <path fill="#5a3d34" d="M78 6c10 26 31 43 62 62 25 15 42 36 42 62 0 18-9 34-24 49 2-21-7-39-27-55-15-12-34-23-55-36-23-14-37-31-38-51C37 21 49 10 78 6z"/>
+  <path fill="#5a3d34" d="M62 72c13 18 29 31 49 45 24 17 36 40 35 68-1 24-11 48-29 72 2-39-5-68-22-89-11-14-27-27-48-41-14-10-21-21-19-34 1-10 7-28 18-54 4-10 8-19 10-26 3 20 10 38 34 55 10 7 23 16 34 27-9 11-22 16-36 14-12-2-22-10-31-24-3-4-8-1-5 4z"/>
+  <path fill="url(#silver)" d="M117 99c13 10 22 23 26 38 13-12 20-26 20-43-7 12-18 21-31 27-5-8-9-15-15-22z"/>
+  <path fill="url(#shine)" opacity=".72" d="M43 45c15 19 37 33 62 49 12 8 22 16 30 26 8-4 16-10 22-18-10-15-25-28-46-41-22-14-41-28-54-47-9 8-15 18-14 31z"/>
+</svg>

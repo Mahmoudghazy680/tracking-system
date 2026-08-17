@@ -1,0 +1,16 @@
+{
+  "navigation": {
+    "software-usage-report": "Software Usage Report"
+  },
+  "software-usage-report": {
+    "filter_apps": "Search by app name or executable…",
+    "unique_apps": "Unique Apps",
+    "users_count": "Users",
+    "col_app": "Application",
+    "col_executable": "Executable",
+    "col_url": "URL",
+    "col_date": "Date",
+    "col_duration": "Duration",
+    "col_intervals": "Intervals"
+  }
+}
