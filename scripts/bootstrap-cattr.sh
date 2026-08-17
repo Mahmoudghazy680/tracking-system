@@ -15,7 +15,7 @@ set +a
 
 docker-compose exec app php artisan key:generate --force
 docker-compose exec app php artisan migrate --seed --seeder=InitialSeeder --force
-docker-compose exec app php artisan cattr:make:admin \
+docker-compose exec app php artisan Tracker:make:admin \
   --email="$APP_ADMIN_EMAIL" \
   --name="$APP_ADMIN_NAME" \
   --password="$APP_ADMIN_PASSWORD"

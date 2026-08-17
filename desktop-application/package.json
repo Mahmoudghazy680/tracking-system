@@ -22,21 +22,21 @@
 		"package-linux": "npx electron-builder -p never -l appimage deb tar.gz",
 		"package-dev-linux": "npx cross-env AT_DEVMODE=meow AT_SENTRY=force npx electron-builder -p never -l appimage deb tar.gz",
 		"package-windows": "npx electron-builder -p never -w portable nsis msi",
-		"package-domain-windows": "npx cross-env AT_DOMAIN_CLIENT=yes AT_DOMAIN_ONLY_AUTH=yes AT_START_HIDDEN_TRAY=yes AT_DISABLE_SSO=yes npx electron-builder -p never -w nsis --config.extraMetadata.domainClient=true --config.extraMetadata.windowsAuthSecret=$WINDOWS_AUTH_SECRET --config.appId=app.cattr.domain --config.productName=\"PIN-Tracker Domain\" --config.artifactName=PIN-Tracker_Domain.\\${ext} --config.nsis.artifactName=PIN-Tracker_Domain_Setup.\\${ext}",
+		"package-domain-windows": "npx cross-env AT_DOMAIN_CLIENT=yes AT_DOMAIN_ONLY_AUTH=yes AT_START_HIDDEN_TRAY=yes AT_DISABLE_SSO=yes npx electron-builder -p never -w nsis --config.extraMetadata.domainClient=true --config.extraMetadata.windowsAuthSecret=$WINDOWS_AUTH_SECRET --config.appId=app.Tracker.domain --config.productName=\"PIN-Tracker Domain\" --config.artifactName=PIN-Tracker_Domain.\\${ext} --config.nsis.artifactName=PIN-Tracker_Domain_Setup.\\${ext}",
 		"package-dev-windows": "npx cross-env AT_DEVMODE=meow AT_SENTRY=force npx electron-builder -p never -w portable nsis msi",
-		"package-mac": "npx cross-env CATTR_NOTARIZE=yes electron-builder -p never -m",
+		"package-mac": "npx cross-env Tracker_NOTARIZE=yes electron-builder -p never -m",
 		"package-mac-unsigned": "npx electron-builder -m -p never",
 		"clean-development": "npx cross-env AT_DEVMODE=meow electron ./tools/clean-development.js"
 	},
 	"build": {
-		"appId": "app.cattr",
+		"appId": "app.Tracker",
 		"artifactName": "PIN-Tracker.${ext}",
 		"productName": "PIN-Tracker",
 		"protocols": [
 			{
 				"name": "PIN-Tracker SSO protocol",
 				"schemes": [
-					"cattr"
+					"Tracker"
 				]
 			}
 		],
@@ -70,9 +70,9 @@
 				"CFBundleURLTypes": [
 					{
 						"CFBundleTypeRole": "Viewer",
-						"CFBundleURLName": "app.cattr.sso",
+						"CFBundleURLName": "app.Tracker.sso",
 						"CFBundleURLSchemes": [
-							"cattr"
+							"Tracker"
 						]
 					}
 				]
@@ -87,8 +87,8 @@
 				"Name": "PIN-Tracker",
 				"Terminal": "false",
 				"Type": "Application",
-				"Keywords": "time;tracker;cattr;tracking;",
-				"MimeType": "x-scheme-handler/cattr;"
+				"Keywords": "time;tracker;Tracker;tracking;",
+				"MimeType": "x-scheme-handler/Tracker;"
 			}
 		},
 		"win": {
@@ -229,7 +229,7 @@
 	],
 	"dependencies": {
 		"@amazingcat/electron-ipc-router": "1.3.2",
-		"@cattr/node": "^4.0.0-RC5",
+		"@Tracker/node": "^4.0.0-RC5",
 		"@sentry/electron": "^2.5.4",
 		"axios": "^0.27.2",
 		"chalk": "^4.1.2",

@@ -11,7 +11,7 @@ use Exception;
 use Settings;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:register')]
+#[AsCommand(name: 'Tracker:register')]
 class RegisterInstance extends Command
 {
     /**
@@ -19,7 +19,7 @@ class RegisterInstance extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:register {adminEmail} {--i : Interactive mode}';
+    protected $signature = 'Tracker:register {adminEmail} {--i : Interactive mode}';
 
     /**
      * The console command description.

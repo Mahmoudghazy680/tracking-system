@@ -1,6 +1,6 @@
 # 1. Executive summary
 
-This implementation uses the least-friction Cattr deployment path for Ubuntu: the official prebuilt Cattr app image plus Percona 8.0, running under Docker Compose on a single VM. For this environment, the public endpoint is `http://tracking.pinnaclemisr.com` and the desktop client must use `http://tracking.pinnaclemisr.com/api`.
+This implementation uses the least-friction Tracker deployment path for Ubuntu: the official prebuilt Tracker app image plus Percona 8.0, running under Docker Compose on a single VM. For this environment, the public endpoint is `http://tracking.pinnaclemisr.com` and the desktop client must use `http://tracking.pinnaclemisr.com/api`.
 
 The bundle in this workspace is already aligned to that path. It includes the runtime env template, Docker Compose stack, executable helper scripts, a manual validation checklist, and a first-report checklist. The only steps that cannot be completed from this local workspace are the VM-executed commands and the manual browser and desktop-client actions.
 
@@ -82,12 +82,12 @@ Purpose:
 - Opens HTTP for the web UI and API.
 - Keeps MySQL internal; port `3306` is not exposed.
 
-## 3.2 Clone and inspect the Cattr server repo
+## 3.2 Clone and inspect the Tracker server repo
 
 The deployment bundle in this workspace already chooses the least-friction path, but if you want to inspect upstream source for verification, run:
 
 ```bash
-git clone https://github.com/cattr-app/server-application.git
+git clone https://github.com/Tracker-app/server-application.git
 cd server-application
 find . -maxdepth 2 \( -name 'README*' -o -name '.env*' -o -name 'docker-compose*.yml' -o -name 'compose*.yml' \)
 ```
@@ -106,7 +106,7 @@ Why this is the least-friction path:
 From this workspace on the VM:
 
 ```bash
-cd /opt/cattr
+cd /opt/Tracker
 make init-env
 ```
 
@@ -209,7 +209,7 @@ This runs the current manual fallback sequence:
 ```bash
 docker-compose exec app php artisan key:generate --force
 docker-compose exec app php artisan migrate --seed --seeder=InitialSeeder --force
-docker-compose exec app php artisan cattr:make:admin --email="$APP_ADMIN_EMAIL" --name="$APP_ADMIN_NAME" --password="$APP_ADMIN_PASSWORD"
+docker-compose exec app php artisan Tracker:make:admin --email="$APP_ADMIN_EMAIL" --name="$APP_ADMIN_NAME" --password="$APP_ADMIN_PASSWORD"
 ```
 
 Verification:
@@ -219,7 +219,7 @@ Verification:
 
 Current correction from older docs:
 - Do not rely on deprecated auth refresh flows.
-- Use `InitialSeeder` and `cattr:make:admin` only as the fallback path when bootstrap does not complete on first run.
+- Use `InitialSeeder` and `Tracker:make:admin` only as the fallback path when bootstrap does not complete on first run.
 
 ## 3.6 Web access validation
 
@@ -257,7 +257,7 @@ Do not use:
 - `http://172.16.70.66` unless you intentionally fall back to raw-IP testing
 
 Common detection issue:
-- The desktop app validates the hostname as a Cattr instance, so the most common failure is entering the site root without `/api`.
+- The desktop app validates the hostname as a Tracker instance, so the most common failure is entering the site root without `/api`.
 
 Authentication:
 - Use normal email and password login first.
@@ -363,11 +363,11 @@ APP_TIMEZONE=Africa/Cairo
 DB_CONNECTION=mysql
 DB_HOST=db
 DB_PORT=3306
-DB_DATABASE=cattr
+DB_DATABASE=Tracker
 DB_USERNAME=root
 DB_PASSWORD=STRONG_DB_PASSWORD
 
-MYSQL_DATABASE=cattr
+MYSQL_DATABASE=Tracker
 MYSQL_ROOT_PASSWORD=STRONG_DB_PASSWORD
 
 APP_ADMIN_NAME=Admin
@@ -385,7 +385,7 @@ For this environment, the concrete values are already prepared in [.env.example]
 ```yaml
 services:
   app:
-    image: registry.git.amazingcat.net/cattr/core/app:latest
+    image: registry.git.amazingcat.net/Tracker/core/app:latest
     restart: unless-stopped
     env_file:
       - ./.env

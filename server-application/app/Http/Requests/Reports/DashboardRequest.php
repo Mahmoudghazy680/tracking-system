@@ -4,11 +4,11 @@ namespace App\Http\Requests\Reports;
 
 use App\Enums\DashboardSortBy;
 use App\Enums\SortDirection;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Filter;
 use Illuminate\Validation\Rules\Enum;
 
-class DashboardRequest extends CattrFormRequest
+class DashboardRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

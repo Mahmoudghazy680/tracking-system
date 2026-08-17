@@ -2,11 +2,11 @@
 
 namespace App\Http\Requests\TaskComment;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Task;
 use App\Models\TaskComment;
 
-class CreateTaskCommentRequest extends CattrFormRequest
+class CreateTaskCommentRequest extends TrackerFormRequest
 {
 
     public function _authorize(): bool

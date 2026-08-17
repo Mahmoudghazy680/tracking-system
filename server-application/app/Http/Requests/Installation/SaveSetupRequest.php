@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\Installation;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class SaveSetupRequest extends CattrFormRequest
+class SaveSetupRequest extends TrackerFormRequest
 {
     /**
      * Get the validation rules that apply to the request.

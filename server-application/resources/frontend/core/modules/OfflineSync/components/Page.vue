@@ -42,7 +42,7 @@
                         <validation-provider
                             ref="intervals_file"
                             v-slot="{ errors }"
-                            :rules="`required|ext:cattr|size:${12 * 1024}`"
+                            :rules="`required|ext:Tracker|size:${12 * 1024}`"
                             :name="$t('offline_sync.intervals_file')"
                             mode="passive"
                         >
@@ -78,7 +78,7 @@
                         <validation-provider
                             ref="screenshots_file"
                             v-slot="{ errors }"
-                            :rules="`required|ext:cattr`"
+                            :rules="`required|ext:Tracker`"
                             :name="$t('offline_sync.screenshots_file')"
                             mode="passive"
                         >
@@ -273,7 +273,7 @@
                     const blob = new Blob([result]);
 
                     const aElement = document.createElement('a');
-                    aElement.setAttribute('download', 'ProjectsAndTasks.cattr');
+                    aElement.setAttribute('download', 'ProjectsAndTasks.Tracker');
                     const href = URL.createObjectURL(blob);
                     aElement.href = href;
                     aElement.setAttribute('target', '_blank');

@@ -5,7 +5,7 @@ namespace App\Http\Responses;
 use Filter;
 use Flugg\Responder\Serializers\SuccessSerializer;
 
-class CattrSuccessResponse extends SuccessSerializer
+class TrackerSuccessResponse extends SuccessSerializer
 {
     /**
      * @inheritDoc

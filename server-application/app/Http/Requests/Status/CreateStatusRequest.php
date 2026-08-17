@@ -2,12 +2,12 @@
 
 namespace App\Http\Requests\Status;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Status;
 use App\Models\User;
 use Illuminate\Validation\Rule;
 
-class CreateStatusRequest extends CattrFormRequest
+class CreateStatusRequest extends TrackerFormRequest
 {
 
     public function _authorize(): bool

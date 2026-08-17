@@ -58,7 +58,7 @@
 </template>
 
 <script>
-    import { t } from '@cattr/ui-kit/src/locale';
+    import { t } from '@Tracker/ui-kit/src/locale';
 
     export default {
         name: 'custom-at-modal',

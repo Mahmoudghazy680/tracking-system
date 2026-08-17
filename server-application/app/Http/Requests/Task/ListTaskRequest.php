@@ -4,9 +4,9 @@ namespace App\Http\Requests\Task;
 
 use App\Helpers\QueryHelper;
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class ListTaskRequest extends CattrFormRequest
+class ListTaskRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

@@ -4,9 +4,9 @@ namespace App\Http\Requests\Task;
 
 use App\Http\Requests\AuthorizesAfterValidation;
 use App\Models\Task;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class DestroyTaskRequest extends CattrFormRequest
+class DestroyTaskRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

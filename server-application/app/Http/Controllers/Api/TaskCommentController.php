@@ -164,7 +164,7 @@ class TaskCommentController extends ItemController
      *        "user": {
      *          "id": 1,
      *          "full_name": "Admin",
-     *          "email": "admin@cattr.app",
+     *          "email": "admin@Tracker.app",
      *          "url": "",
      *          "company_id": 1,
      *          "avatar": "",

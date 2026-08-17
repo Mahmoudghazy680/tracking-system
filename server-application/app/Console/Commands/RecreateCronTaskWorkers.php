@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Settings;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:task:recreate-workers')]
+#[AsCommand(name: 'Tracker:task:recreate-workers')]
 class RecreateCronTaskWorkers extends Command
 {
     /**
@@ -20,7 +20,7 @@ class RecreateCronTaskWorkers extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:task:recreate-workers';
+    protected $signature = 'Tracker:task:recreate-workers';
 
     /**
      * The console command description.

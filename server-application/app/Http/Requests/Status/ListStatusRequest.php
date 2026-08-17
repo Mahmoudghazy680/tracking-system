@@ -3,10 +3,10 @@
 namespace App\Http\Requests\Status;
 
 use App\Helpers\QueryHelper;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Status;
 
-class ListStatusRequest extends CattrFormRequest
+class ListStatusRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

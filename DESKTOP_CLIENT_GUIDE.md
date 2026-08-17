@@ -1,6 +1,6 @@
 # Desktop Client Setup & Time Tracking Guide
 
-This guide covers how to install the Cattr desktop client on user devices and connect it to your server at `172.16.70.66`.
+This guide covers how to install the Tracker desktop client on user devices and connect it to your server at `172.16.70.66`.
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ Before connecting the desktop client, confirm:
 ✅ The web UI is accessible at http://172.16.70.66  
 ✅ You're logged in as admin  
 ✅ You have created:
-  - A test user (e.g., `testuser@cattr.local`)
+  - A test user (e.g., `testuser@Tracker.local`)
   - A project (e.g., "Test Project")
   - A task assigned to that user (e.g., "Sample Task")
 
@@ -16,33 +16,33 @@ Before connecting the desktop client, confirm:
 
 ### Windows
 
-1. Download the Cattr desktop client from: https://cattr.app/download or from your organization's software repository.
+1. Download the Tracker desktop client from: https://Tracker.app/download or from your organization's software repository.
 2. Run the installer (`.exe` file).
 3. Follow the installation wizard.
 4. Launch the application.
 
 ### macOS
 
-1. Download the Cattr desktop client from: https://cattr.app/download
+1. Download the Tracker desktop client from: https://Tracker.app/download
 2. Open the downloaded `.dmg` file.
-3. Drag the Cattr icon to the **Applications** folder.
-4. Open **Applications** and double-click **Cattr**.
+3. Drag the Tracker icon to the **Applications** folder.
+4. Open **Applications** and double-click **Tracker**.
 
 ### Linux
 
-1. Download the Cattr AppImage or .deb from: https://cattr.app/download
+1. Download the Tracker AppImage or .deb from: https://Tracker.app/download
 2. If using AppImage:
    ```bash
-   chmod +x Cattr-*.AppImage
-   ./Cattr-*.AppImage
+   chmod +x Tracker-*.AppImage
+   ./Tracker-*.AppImage
    ```
 3. If using .deb:
    ```bash
-   sudo apt install ./Cattr-*.deb
-   cattr
+   sudo apt install ./Tracker-*.deb
+   Tracker
    ```
 
-## 2. Connect to Your Cattr Server
+## 2. Connect to Your Tracker Server
 
 ### Step 1: Enter the server URL
 
@@ -67,7 +67,7 @@ http://172.16.70.66/api/
 
 ### Step 2: Click "Verify" or "Next"
 
-The client will contact the server and validate that it's a Cattr instance.
+The client will contact the server and validate that it's a Tracker instance.
 
 **If validation fails:**
 - Confirm you can ping `172.16.70.66` from your machine.
@@ -80,7 +80,7 @@ The client will contact the server and validate that it's a Cattr instance.
 When the validation succeeds, you'll see a login prompt.
 
 **Enter:**
-- **Email:** `testuser@cattr.local`
+- **Email:** `testuser@Tracker.local`
 - **Password:** `TestPass#2025!`
 
 (Use whatever credentials you created when you set up the test user in the web UI.)
@@ -158,7 +158,7 @@ Once you see the task list:
 | Client says "Invalid credentials" | Double-check email and password match exactly. Confirm the user exists in the web UI. |
 | No tasks appear after login | Confirm the task is assigned to the logged-in user. Check task status is Active. Try logging out and back in. |
 | Tracked time doesn't appear in reports | Wait a few seconds for the backend to process. Refresh the report. Confirm the user and project filters match the task. |
-| Desktop client can't be installed | Download from https://cattr.app/download. Check your device has write permissions. Try a different download method. |
+| Desktop client can't be installed | Download from https://Tracker.app/download. Check your device has write permissions. Try a different download method. |
 | Screenshots don't appear | Check in **Admin** → **Projects** → project settings to confirm screenshots are enabled. Check user settings under **Users** → user settings. |
 | App monitoring is enabled but no software/programs appear | Open desktop logs and check for `ffi_bindings.node is not a valid Win32 application`. If present: uninstall client, remove local app directory, reinstall the latest Windows installer matching the OS architecture (`x64` recommended), then retest task tracking for 2-3 minutes. |
 
@@ -193,7 +193,7 @@ Regular users can only:
 
 ## Screenshot capture (optional)
 
-The Cattr desktop client can capture screenshots of activity. To use this:
+The Tracker desktop client can capture screenshots of activity. To use this:
 
 1. During tracking, the client periodically captures screenshots
 2. These are stored on the server and viewable in the web UI
@@ -221,6 +221,6 @@ After confirming the first tracking session works:
 - Run `docker-compose logs db` to see database errors
 
 **Client-side issues:**
-- Check the client's log files (usually in `~/.cattr/logs` or application data directory)
+- Check the client's log files (usually in `~/.Tracker/logs` or application data directory)
 - Confirm the server URL and credentials are correct
-- Try installing the latest version from https://cattr.app/download
+- Try installing the latest version from https://Tracker.app/download

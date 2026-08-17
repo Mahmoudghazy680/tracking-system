@@ -12,7 +12,7 @@ use Str;
 use Symfony\Component\Console\Attribute\AsCommand;
 use App\Jobs\VerifyAttachmentHash;
 
-#[AsCommand(name: 'cattr:attachments:verify')]
+#[AsCommand(name: 'Tracker:attachments:verify')]
 class VerifyAttachments extends Command
 {
     /**
@@ -20,7 +20,7 @@ class VerifyAttachments extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:attachments:verify';
+    protected $signature = 'Tracker:attachments:verify';
 
     /**
      * The console command description.

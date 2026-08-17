@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\Priority;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Priority;
 
-class CreatePriorityRequest extends CattrFormRequest
+class CreatePriorityRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

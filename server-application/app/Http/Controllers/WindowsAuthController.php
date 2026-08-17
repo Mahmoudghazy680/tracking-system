@@ -255,7 +255,7 @@ class WindowsAuthController extends BaseController
             $user->invitation_sent = false;
         }
 
-        if (preg_match('/' . config('auth.cattr-client-agent') . '/', (string) $request->header('User_agent'))) {
+        if (preg_match('/' . config('auth.Tracker-client-agent') . '/', (string) $request->header('User_agent'))) {
             $user->client_installed = 1;
         }
 

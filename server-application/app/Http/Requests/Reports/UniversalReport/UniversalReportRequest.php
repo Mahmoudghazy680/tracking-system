@@ -3,11 +3,11 @@
 namespace App\Http\Requests\Reports\UniversalReport;
 
 use App\Enums\UniversalReportBase;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Exception;
 use Illuminate\Validation\Rules\Enum;
 
-class UniversalReportRequest extends CattrFormRequest
+class UniversalReportRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

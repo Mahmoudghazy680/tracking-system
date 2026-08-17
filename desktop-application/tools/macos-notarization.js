@@ -3,21 +3,21 @@ const path = require('path');
 const debug = require('debug');
 require('dotenv').config();
 
-debug.enable('cattr:notarization');
-const log = debug('cattr:notarization');
+debug.enable('Tracker:notarization');
+const log = debug('Tracker:notarization');
 
 /**
  * Application ID
  * @type {String}
  */
-const appId = 'app.cattr';
+const appId = 'app.Tracker';
 
 module.exports = async params => {
 
   if (process.platform !== 'darwin')
     return;
 
-  if (process.env.CATTR_NOTARIZE !== 'yes') {
+  if (process.env.Tracker_NOTARIZE !== 'yes') {
 
     log('notarization skipped');
     return;

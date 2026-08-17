@@ -11,7 +11,7 @@ use Storage;
 use Str;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:attachments:find-sus-files')]
+#[AsCommand(name: 'Tracker:attachments:find-sus-files')]
 class FindSusFiles extends Command
 {
     /**
@@ -19,7 +19,7 @@ class FindSusFiles extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:attachments:find-sus-files';
+    protected $signature = 'Tracker:attachments:find-sus-files';
 
     /**
      * The console command description.

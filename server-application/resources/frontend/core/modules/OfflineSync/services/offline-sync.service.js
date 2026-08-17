@@ -21,7 +21,7 @@ export default class OfflineSyncService {
     }
 
     /**
-     * Upload Intervals.cattr file
+     * Upload Intervals.Tracker file
      * @returns {Promise<void>}
      * @param payload
      */
@@ -34,7 +34,7 @@ export default class OfflineSyncService {
     }
 
     /**
-     * Upload Screenshots.cattr file
+     * Upload Screenshots.Tracker file
      * @returns {Promise<void>}
      * @param payload
      * @param progressCallback

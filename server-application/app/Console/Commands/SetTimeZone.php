@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 use Settings;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:set:timezone')]
+#[AsCommand(name: 'Tracker:set:timezone')]
 class SetTimeZone extends Command
 {
     /**
@@ -15,7 +15,7 @@ class SetTimeZone extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:set:timezone {timezone}';
+    protected $signature = 'Tracker:set:timezone {timezone}';
 
     /**
      * The console command description.

@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\Reports;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Filter;
 
-class ProjectReportRequest extends CattrFormRequest
+class ProjectReportRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

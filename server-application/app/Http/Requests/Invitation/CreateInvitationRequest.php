@@ -3,11 +3,11 @@
 namespace App\Http\Requests\Invitation;
 
 use App\Enums\Role;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Invitation;
 use Illuminate\Validation\Rules\Enum;
 
-class CreateInvitationRequest extends CattrFormRequest
+class CreateInvitationRequest extends TrackerFormRequest
 {
     /**
      * Determine if user authorized to make this request.

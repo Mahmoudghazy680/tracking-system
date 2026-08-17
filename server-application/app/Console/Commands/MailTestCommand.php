@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Mail;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:mail:test')]
+#[AsCommand(name: 'Tracker:mail:test')]
 class MailTestCommand extends Command
 {
     /**
@@ -14,7 +14,7 @@ class MailTestCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:mail:test {destination}';
+    protected $signature = 'Tracker:mail:test {destination}';
 
     /**
      * The console command description.

@@ -87,7 +87,7 @@ class UserController extends ItemController
      *    {
      *       "id": 1,
      *       "full_name": "Admin",
-     *       "email": "admin@cattr.app",
+     *       "email": "admin@Tracker.app",
      *       "url": "",
      *       "company_id": 1,
      *       "avatar": "",
@@ -201,7 +201,7 @@ class UserController extends ItemController
      *   "computer_time_popup" : 3,
      *   "type" : "employee",
      *   "web_and_app_monitoring" : 1,
-     *   "email" : "123@cattr.app",
+     *   "email" : "123@Tracker.app",
      *   "password" : "password",
      *   "full_name" : "name"
      * }
@@ -231,7 +231,7 @@ class UserController extends ItemController
      *  HTTP/1.1 200 OK
      *  {
      *   "full_name": "name",
-     *   "email": "123@cattr.app",
+     *   "email": "123@Tracker.app",
      *   "user_language": "en",
      *   "active": 1,
      *   "screenshots_state": 1,

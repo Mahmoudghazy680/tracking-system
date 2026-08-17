@@ -1,6 +1,6 @@
 # Tracker VM Deployment Runbook
 
-This package deploys Cattr to a single Ubuntu VM using Docker, the official prebuilt Cattr app image, and Percona 8.0.
+This package deploys Tracker to a single Ubuntu VM using Docker, the official prebuilt Tracker app image, and Percona 8.0.
 
 Public endpoint:
 
@@ -93,13 +93,13 @@ sudo ufw enable
 Use any method you prefer. One example from your local machine:
 
 ```bash
-scp -r . user@172.16.70.66:/opt/cattr
+scp -r . user@172.16.70.66:/opt/Tracker
 ```
 
 Then on the VM:
 
 ```bash
-cd /opt/cattr
+cd /opt/Tracker
 make init-env
 ```
 
@@ -163,7 +163,7 @@ Use this only if the admin account is not usable or logs show bootstrap did not 
 ```bash
 docker-compose exec app php artisan key:generate --force
 docker-compose exec app php artisan migrate --seed --seeder=InitialSeeder --force
-docker-compose exec app php artisan cattr:make:admin \
+docker-compose exec app php artisan Tracker:make:admin \
   --email="admin@tracking.pinnaclemisr.com" \
   --name="Admin" \
   --password="REPLACE_WITH_STRONG_ADMIN_PASSWORD"

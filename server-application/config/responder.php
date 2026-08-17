@@ -14,8 +14,8 @@ return [
     */
 
     'serializers' => [
-        'success' => App\Http\Responses\CattrSuccessResponse::class,
-        'error' => App\Http\Responses\CattrErrorResponse::class,
+        'success' => App\Http\Responses\TrackerSuccessResponse::class,
+        'error' => App\Http\Responses\TrackerErrorResponse::class,
     ],
 
     /*

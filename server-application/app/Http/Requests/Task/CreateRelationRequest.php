@@ -5,10 +5,10 @@ namespace App\Http\Requests\Task;
 use App\Enums\TaskRelationType;
 use App\Http\Requests\AuthorizesAfterValidation;
 use App\Models\Task;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Illuminate\Validation\Rule;
 
-class CreateRelationRequest extends CattrFormRequest
+class CreateRelationRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

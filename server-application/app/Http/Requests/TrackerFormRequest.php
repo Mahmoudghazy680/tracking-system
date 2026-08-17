@@ -6,7 +6,7 @@ use App\Exceptions\Entities\AuthorizationException;
 use Filter;
 use Illuminate\Foundation\Http\FormRequest;
 
-abstract class CattrFormRequest extends FormRequest
+abstract class TrackerFormRequest extends FormRequest
 {
     /**
      * Handle a failed validation attempt.

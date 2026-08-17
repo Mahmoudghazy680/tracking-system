@@ -197,7 +197,7 @@ class TaskController extends ItemController
      *       "user": {
      *         "id": 1,
      *         "full_name": "Admin",
-     *         "email": "admin@cattr.app",
+     *         "email": "admin@Tracker.app",
      *         ...
      *       }
      *     },
@@ -897,7 +897,7 @@ class TaskController extends ItemController
      * @apiSuccess {Number} status The HTTP status code.
      * @apiSuccess {File} data A binary file containing the packed projects and tasks data.
      * @apiSuccess {String} Content-type The content type of the file, which is `application/octet-stream`.
-     * @apiSuccess {String} Content-Disposition The content disposition of the file, indicating an attachment with the filename `ProjectsAndTasks.cattr`.
+     * @apiSuccess {String} Content-Disposition The content disposition of the file, indicating an attachment with the filename `ProjectsAndTasks.Tracker`.
      *
      *
      * @apiError UserNotFound The user with the specified ID was not found.
@@ -940,7 +940,7 @@ class TaskController extends ItemController
 
         return response()->make($packed, 200, [
             'Content-type: application/octet-stream',
-            'Content-Disposition: attachment; filename=ProjectsAndTasks.cattr'
+            'Content-Disposition: attachment; filename=ProjectsAndTasks.Tracker'
         ]);
     }
 

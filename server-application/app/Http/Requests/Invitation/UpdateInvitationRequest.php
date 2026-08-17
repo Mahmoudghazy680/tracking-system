@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\Invitation;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Invitation;
 
-class UpdateInvitationRequest extends CattrFormRequest
+class UpdateInvitationRequest extends TrackerFormRequest
 {
     /**
      * Determine if user authorized to make this request.

@@ -122,7 +122,7 @@
     "Import result": "Результат импорта",
     "Projects and tasks successfully imported": "Проекты и задачи успешно импортированы",
     "Unable to import data from another user": "Нельзя импортировать задачи другого пользователя",
-    "only .cattr files are accepted": "принимаются только файлы .cattr",
+    "only .Tracker files are accepted": "принимаются только файлы .Tracker",
     "Intervals": "Интервалы",
     "Screenshots": "Скриншоты",
     "You've %% not synced intervals.": "У Вас %% несинхронизированных интервалов.",

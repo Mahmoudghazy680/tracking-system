@@ -11,7 +11,7 @@ use Settings;
 use Storage;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:reset')]
+#[AsCommand(name: 'Tracker:reset')]
 class ResetCommand extends Command
 {
     /**
@@ -19,14 +19,14 @@ class ResetCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:reset {--s|seed} {--f|force} {--i|images}';
+    protected $signature = 'Tracker:reset {--s|seed} {--f|force} {--i|images}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Cattr flush database';
+    protected $description = 'Tracker flush database';
 
     protected array $protectedTables = ['migrations', 'jobs', 'failed_jobs'];
 
@@ -37,7 +37,7 @@ class ResetCommand extends Command
      */
     public function handle(): int
     {
-        if (!$this->option('force') && !$this->confirm('Are you sure want to drop data for your Cattr instance?')) {
+        if (!$this->option('force') && !$this->confirm('Are you sure want to drop data for your Tracker instance?')) {
             return 0;
         }
 

@@ -6,7 +6,7 @@ use App\Helpers\Version;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:module:version')]
+#[AsCommand(name: 'Tracker:module:version')]
 class ModuleVersion extends Command
 {
     /**
@@ -14,7 +14,7 @@ class ModuleVersion extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:module:version {module}';
+    protected $signature = 'Tracker:module:version {module}';
 
     /**
      * The console command description.

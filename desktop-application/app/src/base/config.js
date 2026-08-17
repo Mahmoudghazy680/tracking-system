@@ -22,11 +22,11 @@ const isDomainClientEnabled = (
  * @type {String}
  */
 const packageId = isDomainClientEnabled
-  ? (isDeveloperModeEnabled ? 'cattr-domain-develop' : 'cattr-domain')
-  : (isDeveloperModeEnabled ? 'cattr-develop' : 'cattr');
+  ? (isDeveloperModeEnabled ? 'Tracker-domain-develop' : 'Tracker-domain')
+  : (isDeveloperModeEnabled ? 'Tracker-develop' : 'Tracker');
 
 /**
- * Version of this Cattr package
+ * Version of this Tracker package
  * @type {String}
  */
 const packageVersion = packageManifest.version;
@@ -64,7 +64,7 @@ configuration.sentry = {
   dsnFrontend: 'https://00bd1ee1db824310812252bb96e96945@sentry.amazingcat.net/14',
 
   // Setting the current release
-  release: `cattr@${packageVersion}`,
+  release: `Tracker@${packageVersion}`,
 
 };
 
@@ -143,7 +143,7 @@ configuration.usageStatistics = {
   /**
    * Base URL of statistics collector
    */
-  collectorUrl: 'https://stats.cattr.app',
+  collectorUrl: 'https://stats.Tracker.app',
 
 };
 
@@ -167,7 +167,7 @@ configuration.updateNotification = {
    * URL to downloads page
    * @type {String}
    */
-  downloadsPageUrl: 'https://cattr.app/desktop',
+  downloadsPageUrl: 'https://Tracker.app/desktop',
 
 };
 

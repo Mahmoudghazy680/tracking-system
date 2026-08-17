@@ -4,11 +4,11 @@ namespace App\Http\Requests\Project;
 
 use App\Enums\ScreenshotsState;
 use App\Models\Project;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Enum;
 
-class CreateProjectRequest extends CattrFormRequest
+class CreateProjectRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\Reports;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class TopWebsitesReportRequest extends CattrFormRequest
+class TopWebsitesReportRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

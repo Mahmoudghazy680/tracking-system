@@ -4,11 +4,11 @@ namespace App\Http\Requests\ProjectMember;
 
 use App\Enums\Role;
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Project;
 use Illuminate\Validation\Rules\Enum;
 
-class BulkEditProjectMemberRequest extends CattrFormRequest
+class BulkEditProjectMemberRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

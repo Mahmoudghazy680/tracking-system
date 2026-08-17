@@ -2,12 +2,12 @@
 
 namespace App\Http\Requests\Interval;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Validation\Rules\File;
 use Str;
 
-class UploadOfflineScreenshotsRequest extends CattrFormRequest
+class UploadOfflineScreenshotsRequest extends TrackerFormRequest
 {
 
     public function _authorize(): bool
@@ -23,7 +23,7 @@ class UploadOfflineScreenshotsRequest extends CattrFormRequest
                 File::types('application/zip'),
                 function ($_, UploadedFile $file, $fail) {
                     $fileName = $file->getClientOriginalName();
-                    if (Str::endsWith($fileName, '.cattr') === false) {
+                    if (Str::endsWith($fileName, '.Tracker') === false) {
                         $fail('validation.offline-sync.wrong_extension')->translate();
                     }
                 }

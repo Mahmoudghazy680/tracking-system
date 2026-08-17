@@ -9,10 +9,10 @@ use Validator;
 use Illuminate\Validation\Rule;
 use Illuminate\Contracts\Console\Isolatable;
 
-#[AsCommand(name: 'cattr:make:admin')]
+#[AsCommand(name: 'Tracker:make:admin')]
 class MakeAdmin extends Command implements Isolatable
 {
-    protected $signature = 'cattr:make:admin
+    protected $signature = 'Tracker:make:admin
                             {--o : Skip instance registration}
                             {--email= : User email}
                             {--name= : User name}
@@ -35,7 +35,7 @@ class MakeAdmin extends Command implements Isolatable
             }
         }
 
-        $email = env('APP_ADMIN_EMAIL', 'admin@cattr.app');
+        $email = env('APP_ADMIN_EMAIL', 'admin@Tracker.app');
 
         if (Validator::make([
                 'email' => $email
@@ -51,7 +51,7 @@ class MakeAdmin extends Command implements Isolatable
             return 1;
         }
 
-        if ($email !== 'admin@cattr.app' && !$this->option('o') && !User::admin()->count()) {
+        if ($email !== 'admin@Tracker.app' && !$this->option('o') && !User::admin()->count()) {
             $self = $this;
             rescue(
                 static fn () => $self->call(

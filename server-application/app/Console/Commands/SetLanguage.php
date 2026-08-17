@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 use Settings;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:set:language')]
+#[AsCommand(name: 'Tracker:set:language')]
 class SetLanguage extends Command
 {
     /**
@@ -15,7 +15,7 @@ class SetLanguage extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:set:language {language}';
+    protected $signature = 'Tracker:set:language {language}';
 
     /**
      * The console command description.

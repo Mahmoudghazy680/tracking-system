@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\User;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\User;
 
-class SendInviteUserRequest extends CattrFormRequest
+class SendInviteUserRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

@@ -3,10 +3,10 @@
 namespace App\Http\Requests\Interval;
 
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\TimeInterval;
 
-class BulkDestroyTimeIntervalRequest extends CattrFormRequest
+class BulkDestroyTimeIntervalRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

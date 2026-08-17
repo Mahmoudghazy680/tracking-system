@@ -23,7 +23,7 @@
                     <div v-if="transferStatus === 'finish' && openStatus === 'error'" class="col-10 col-offset-7">
                         <p v-t="'auth.desktop.error'" />
                         <i18n path="auth.desktop.download" tag="p">
-                            <a v-t="'auth.desktop.download_button'" href="https://cattr.app/desktop" target="_blank" />
+                            <a v-t="'auth.desktop.download_button'" href="https://Tracker.app/desktop" target="_blank" />
                         </i18n>
                     </div>
                     <div class="col-6 col-offset-9">
@@ -103,7 +103,7 @@
                     this.openStatus = 'process';
 
                     const client = window.open(
-                        `cattr://authenticate?url=${encodeURIComponent(
+                        `Tracker://authenticate?url=${encodeURIComponent(
                             process.env.VUE_APP_API_URL || `${window.location.origin}/api`,
                         )}&token=${this.token}`,
                     );

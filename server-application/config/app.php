@@ -21,7 +21,7 @@ return [
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
     'key' => env('APP_KEY'),
-    'stats_collector_url' => env('STATS_COLLECTOR_URL', 'https://stats.cattr.app'),
+    'stats_collector_url' => env('STATS_COLLECTOR_URL', 'https://stats.Tracker.app'),
     'cipher' => 'AES-256-CBC',
     'recaptcha' => [
         'enabled' => env('RECAPTCHA_ENABLED', false)

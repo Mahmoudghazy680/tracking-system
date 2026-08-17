@@ -3,10 +3,10 @@
 namespace App\Http\Requests\ProjectMember;
 
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Project;
 
-class ShowProjectMemberRequest extends CattrFormRequest
+class ShowProjectMemberRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

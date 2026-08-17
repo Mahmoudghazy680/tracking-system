@@ -45,13 +45,13 @@ wait:
 	./scripts/wait-for-stack.sh
 
 bootstrap:
-	./scripts/bootstrap-cattr.sh
+	./scripts/bootstrap-Tracker.sh
 
 validate:
-	./scripts/validate-cattr.sh
+	./scripts/validate-Tracker.sh
 
 deploy:
-	./scripts/deploy-cattr.sh
+	./scripts/deploy-Tracker.sh
 
 diagnose:
 	./scripts/diagnose-access.sh

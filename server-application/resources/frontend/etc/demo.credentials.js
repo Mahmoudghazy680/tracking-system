@@ -3,7 +3,7 @@ module.exports = {
     DEMO_CREDENTIALS: [
         {
             user: 'Administrator',
-            email: 'admin@cattr.app',
+            email: 'admin@Tracker.app',
             password: 'password',
         },
         {

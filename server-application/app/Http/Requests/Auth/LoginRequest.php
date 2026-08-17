@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\Auth;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class LoginRequest extends CattrFormRequest
+class LoginRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

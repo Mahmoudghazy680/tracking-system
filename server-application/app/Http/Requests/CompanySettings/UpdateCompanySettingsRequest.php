@@ -4,10 +4,10 @@ namespace App\Http\Requests\CompanySettings;
 
 use App\Enums\Role;
 use App\Enums\ScreenshotsState;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Illuminate\Validation\Rules\Enum;
 
-class UpdateCompanySettingsRequest extends CattrFormRequest
+class UpdateCompanySettingsRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

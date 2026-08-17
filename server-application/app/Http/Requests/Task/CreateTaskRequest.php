@@ -4,10 +4,10 @@ namespace App\Http\Requests\Task;
 
 use App\Http\Requests\AuthorizesAfterValidation;
 use App\Models\Task;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Illuminate\Validation\Rule;
 
-class CreateTaskRequest extends CattrFormRequest
+class CreateTaskRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

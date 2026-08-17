@@ -3,9 +3,9 @@
 namespace App\Http\Requests\Interval;
 
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class TrackAppRequest extends CattrFormRequest
+class TrackAppRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

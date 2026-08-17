@@ -4,9 +4,9 @@ namespace App\Http\Requests\Attachment;
 
 use App\Helpers\AttachmentHelper;
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class CreateAttachmentRequest extends CattrFormRequest
+class CreateAttachmentRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

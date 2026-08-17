@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\Auth;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class WindowsLoginRequest extends CattrFormRequest
+class WindowsLoginRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

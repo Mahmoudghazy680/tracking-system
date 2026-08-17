@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const debug = require('debug');
 
-debug.enable('cattr:artifact-manifest');
-const log = debug('cattr:artifact-manifest');
+debug.enable('Tracker:artifact-manifest');
+const log = debug('Tracker:artifact-manifest');
 
 module.exports = () => {
 
@@ -124,7 +124,7 @@ module.exports = () => {
 
         artifact.format = 'deb';
         artifact.formatHuman = 'Deb Package';
-        artifact.link = `https://dl.cattr.app/packages/deb/amd64/${file}`;
+        artifact.link = `https://dl.Tracker.app/packages/deb/amd64/${file}`;
 
       }
 
@@ -142,7 +142,7 @@ module.exports = () => {
 
       log('found %s artifact at %s', artifact.format, file);
       if (!artifact.link)
-        artifact.link = `https://dl.cattr.app/desktop/${manifest.version}/${file}`;
+        artifact.link = `https://dl.Tracker.app/desktop/${manifest.version}/${file}`;
       manifest.artifacts.push(artifact);
 
     }

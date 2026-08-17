@@ -24,7 +24,7 @@ class StatusController extends Controller
      * @apiSuccessExample {json} Response Example
      *  HTTP/1.1 200 OK
      *  {
-     *    "cattr": true,
+     *    "Tracker": true,
      *    "cat": "(=ㅇ༝ㅇ=)"
      *    "version": "dev"
      *  }
@@ -36,7 +36,7 @@ class StatusController extends Controller
     public function __invoke(): JsonResponse
     {
         return responder()->success([
-            'cattr' => true,
+            'Tracker' => true,
             'cat' => CatHelper::getCat(),
             'version' => config('app.version'),
         ])->respond();

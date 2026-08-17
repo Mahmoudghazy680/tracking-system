@@ -4,7 +4,7 @@ Use this checklist after `make deploy` succeeds.
 
 ## 1. Browser and API
 
-- Open http://tracking.pinnaclemisr.com/ and confirm the Cattr login page loads.
+- Open http://tracking.pinnaclemisr.com/ and confirm the Tracker login page loads.
 - Run `make validate` and confirm API status, admin login, and `/api/auth/me` succeed.
 
 ## 2. Admin web UI

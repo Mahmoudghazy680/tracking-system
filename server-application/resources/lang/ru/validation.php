@@ -149,7 +149,7 @@ return [
         'screenshot_not_attached' => 'Скриншот не прикреплён (см. логи)',
         'time_interval_already_exist' => 'Время для этого интервала уже существует.',
         'time_interval_added' => 'Добавлен',
-        'wrong_extension' => 'Расширение файла должно быть .cattr'
+        'wrong_extension' => 'Расширение файла должно быть .Tracker'
     ],
 
     'tasks-relations' => [

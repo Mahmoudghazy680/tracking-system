@@ -4,12 +4,12 @@ namespace App\Http\Requests\Project;
 
 use App\Enums\ScreenshotsState;
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Project;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules\Enum;
 
-class EditProjectRequest extends CattrFormRequest
+class EditProjectRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

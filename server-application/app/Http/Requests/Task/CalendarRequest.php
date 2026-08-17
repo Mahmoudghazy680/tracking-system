@@ -3,10 +3,10 @@
 namespace App\Http\Requests\Task;
 
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Illuminate\Validation\Rule;
 
-class CalendarRequest extends CattrFormRequest
+class CalendarRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

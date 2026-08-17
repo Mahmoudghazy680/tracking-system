@@ -16,7 +16,7 @@ class CalculateEfficiency extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:calculate-efficiency';
+    protected $signature = 'Tracker:calculate-efficiency';
 
     /**
      * The console command description.

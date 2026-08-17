@@ -15,7 +15,7 @@ class FakeScreenshotGenerator
     {
         $service = app()->make(ScreenshotService::class);
 
-        $tmpFile = tempnam(sys_get_temp_dir(), 'cattr_screenshot');
+        $tmpFile = tempnam(sys_get_temp_dir(), 'Tracker_screenshot');
 
         $image = imagecreatetruecolor(self::SCREENSHOT_WIDTH, self::SCREENSHOT_HEIGHT);
         $background = imagecolorallocate($image, random_int(0, 255), random_int(0, 255), random_int(0, 255));

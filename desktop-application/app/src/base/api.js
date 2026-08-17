@@ -1,7 +1,7 @@
-const Cattr = require('@cattr/node');
+const Tracker = require('@Tracker/node');
 const keychain = require('../utils/keychain');
 
-const api = new Cattr();
+const api = new Tracker();
 
 api.tokenProvider = {
 

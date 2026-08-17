@@ -17,7 +17,7 @@
     export default {
         name: 'App',
         async created() {
-            if (!(await this.$store.dispatch('httpRequest/getCattrStatus'))) {
+            if (!(await this.$store.dispatch('httpRequest/getTrackerStatus'))) {
                 if (this.$route.name !== 'api.error') {
                     await this.$router.replace({ name: 'api.error' });
                     return;

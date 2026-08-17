@@ -34,9 +34,9 @@ const actions = {
         return installed || false;
     },
 
-    async getCattrStatus() {
-        const { cattr } = await new ApiService().status();
-        return cattr || false;
+    async getTrackerStatus() {
+        const { Tracker } = await new ApiService().status();
+        return Tracker || false;
     },
 };
 

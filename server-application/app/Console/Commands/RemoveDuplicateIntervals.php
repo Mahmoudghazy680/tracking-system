@@ -7,7 +7,7 @@ use DB;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:intervals:dedupe')]
+#[AsCommand(name: 'Tracker:intervals:dedupe')]
 class RemoveDuplicateIntervals extends Command
 {
     /**
@@ -15,7 +15,7 @@ class RemoveDuplicateIntervals extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:intervals:dedupe';
+    protected $signature = 'Tracker:intervals:dedupe';
 
     /**
      * The console command description.

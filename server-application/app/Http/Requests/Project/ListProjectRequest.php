@@ -5,9 +5,9 @@ namespace App\Http\Requests\Project;
 use App\Helpers\QueryHelper;
 use App\Http\Requests\AuthorizesAfterValidation;
 use App\Models\Project;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class ListProjectRequest extends CattrFormRequest
+class ListProjectRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

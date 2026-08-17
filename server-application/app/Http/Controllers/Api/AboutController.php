@@ -25,7 +25,7 @@ class AboutController extends Controller
     {
         $this->client = new Client([
             'base_uri' => config('app.stats_collector_url') . '/v2/',
-            'headers' => ['x-cattr-instance' => Settings::scope('core')->get('instance')],
+            'headers' => ['x-Tracker-instance' => Settings::scope('core')->get('instance')],
         ]);
     }
 

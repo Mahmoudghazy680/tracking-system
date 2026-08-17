@@ -90,7 +90,7 @@ class AuthController extends BaseController
 
         $this->recaptcha->clearCaptchaAmounts();
 
-        if (preg_match('/' . config('auth.cattr-client-agent') . '/', $request->header('User_agent'))) {
+        if (preg_match('/' . config('auth.Tracker-client-agent') . '/', $request->header('User_agent'))) {
             $user->client_installed = 1;
             $user->save();
         }
@@ -192,7 +192,7 @@ class AuthController extends BaseController
      *  {
      *      "id": 1,
      *      "full_name": "Admin",
-     *      "email": "admin@cattr.app",
+     *      "email": "admin@Tracker.app",
      *      "url": "",
      *      "company_id": 1,
      *      "avatar": "",
@@ -312,7 +312,7 @@ class AuthController extends BaseController
     }
 
     /**
-     * @apiDeprecated Exists only for compatibility with old Cattr client
+     * @apiDeprecated Exists only for compatibility with old Tracker client
      * @api            {post} /auth/refresh Refresh
      * @apiDescription Refreshes JWT
      *
@@ -332,7 +332,7 @@ class AuthController extends BaseController
 
     /**
      * @return JsonResponse
-     * @deprecated Exists only for compatibility with old Cattr client
+     * @deprecated Exists only for compatibility with old Tracker client
      */
     public function refresh(): JsonResponse
     {

@@ -11,7 +11,7 @@ docker-compose pull
 docker-compose up -d
 
 ./scripts/wait-for-stack.sh
-./scripts/validate-cattr.sh
+./scripts/validate-Tracker.sh
 
 echo "Automated deployment steps completed"
 echo "Complete the remaining manual checks in CHECKLIST.md"

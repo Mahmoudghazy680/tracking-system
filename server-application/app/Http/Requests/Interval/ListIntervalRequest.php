@@ -5,9 +5,9 @@ namespace App\Http\Requests\Interval;
 use App\Helpers\QueryHelper;
 use App\Http\Requests\AuthorizesAfterValidation;
 use App\Models\TimeInterval;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class ListIntervalRequest extends CattrFormRequest
+class ListIntervalRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

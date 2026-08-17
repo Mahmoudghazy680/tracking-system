@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\Reports;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Filter;
 
-class TimeUseReportRequest extends CattrFormRequest
+class TimeUseReportRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

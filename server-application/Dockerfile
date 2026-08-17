@@ -1,18 +1,18 @@
 # syntax=docker/dockerfile:1-labs
-FROM registry.git.amazingcat.net/cattr/core/wolfi-os-image/cattr-dev:latest AS builder
+FROM registry.git.amazingcat.net/Tracker/core/wolfi-os-image/Tracker-dev:latest AS builder
 
 ARG SENTRY_DSN
 ARG APP_VERSION
 ARG APP_ENV=production
 ARG REVERB_SCHEME=http
 ARG REVERB_PORT=8080
-ARG BACKEND_MODULES="cattr/gitlab_integration-module cattr/redmine_integration-module"
+ARG BACKEND_MODULES="Tracker/gitlab_integration-module Tracker/redmine_integration-module"
 ENV IMAGE_VERSION=5.0.0
 ENV APP_VERSION $APP_VERSION
 ENV SENTRY_DSN $SENTRY_DSN
 ENV APP_ENV $APP_ENV
 ENV YARN_ENABLE_GLOBAL_CACHE=true
-ENV REVERB_APP_KEY="cattr"
+ENV REVERB_APP_KEY="Tracker"
 ENV REVERB_HOST="127.0.0.1"
 ENV REVERB_SCHEME $REVERB_SCHEME
 ENV REVERB_PORT $REVERB_PORT
@@ -41,7 +41,7 @@ RUN set -x && \
 RUN set -x && \
     php artisan storage:link
 
-FROM registry.git.amazingcat.net/cattr/core/wolfi-os-image/cattr:latest AS runtime
+FROM registry.git.amazingcat.net/Tracker/core/wolfi-os-image/Tracker:latest AS runtime
 
 ARG SENTRY_DSN
 ARG APP_VERSION
@@ -51,7 +51,7 @@ ARG REVERB_APP_SECRET="secret"
 ARG REVERB_SCHEME=http
 ARG REVERB_PORT=8080
 ENV IMAGE_VERSION=5.0.0
-ENV REVERB_APP_KEY="cattr"
+ENV REVERB_APP_KEY="Tracker"
 ENV REVERB_HOST="127.0.0.1"
 ENV REVERB_SCHEME $REVERB_SCHEME
 ENV REVERB_PORT $REVERB_PORT

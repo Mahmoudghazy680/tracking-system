@@ -1,16 +1,16 @@
 {
-  "name": "cattr/backend-application",
-  "description": "Backend Application for Cattr",
+  "name": "Tracker/backend-application",
+  "description": "Backend Application for Tracker",
   "license": "SSPL-1.0",
   "type": "project",
-  "homepage": "https://cattr.app",
+  "homepage": "https://Tracker.app",
   "support": {
-    "email": "hi@cattr.app",
-    "docs": "https://docs.cattr.app/backend#/",
-    "forum": "https://community.cattr.app/public/",
-    "issues": "https://git.amazingcat.net/cattr/core/app/-/issues",
-    "chat": "https://cattr.app",
-    "source": "https://git.amazingcat.net/cattr/core/app"
+    "email": "hi@Tracker.app",
+    "docs": "https://docs.Tracker.app/backend#/",
+    "forum": "https://community.Tracker.app/public/",
+    "issues": "https://git.amazingcat.net/Tracker/core/app/-/issues",
+    "chat": "https://Tracker.app",
+    "source": "https://git.amazingcat.net/Tracker/core/app"
   },
   "require": {
     "php": "~8.2",
@@ -102,7 +102,7 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "https://git.amazingcat.net/api/v4/group/cattr/-/packages/composer/"
+      "url": "https://git.amazingcat.net/api/v4/group/Tracker/-/packages/composer/"
     }
   ],
   "minimum-stability": "stable",

@@ -1,6 +1,6 @@
 # Tracker Quickstart Setup
 
-Your Cattr server is running at **http://172.16.70.66**.
+Your Tracker server is running at **http://172.16.70.66**.
 
 ## Current Status
 
@@ -27,7 +27,7 @@ You need at least:
 ### Option A: From the web UI (simplest)
 
 1. Open http://172.16.70.66 in your browser
-2. Log in as admin: `admin@tracking.pinnaclemisr.com` / `CattrAdmin#2025!`
+2. Log in as admin: `admin@tracking.pinnaclemisr.com` / `TrackerAdmin#2025!`
 3. Go to **Users** → create a new user
 4. Go to **Projects** → create a new project
 5. Go to **Tasks** → create a task and assign it to the user
@@ -37,13 +37,13 @@ You need at least:
 Run this on the VM to create everything at once:
 
 ```bash
-cd /home/bsrd/cattr
+cd /home/bsrd/Tracker
 bash scripts/create-test-data.sh
 ```
 
 The script will:
 - Log in as admin
-- Create a test user: `testuser@cattr.local` / `TestPass#2025!`
+- Create a test user: `testuser@Tracker.local` / `TestPass#2025!`
 - Create a test project: "Test Project"
 - Create a test task: "Sample Task"
 - Assign the task to the test user
@@ -60,7 +60,7 @@ The script will:
 4. Click **+ New User**
 5. Fill in:
    - **Full Name:** Test User
-   - **Email:** testuser@cattr.local
+   - **Email:** testuser@Tracker.local
    - **Password:** TestPass#2025!
    - **Confirm Password:** TestPass#2025!
 6. Click **Save**
@@ -87,7 +87,7 @@ You should now see the task under **Tasks**. If you don't see it, click **Filter
 
 ## Step 2: Install the desktop client
 
-1. Download the official Cattr desktop client from https://cattr.app/ (or use your organization's binary).
+1. Download the official Tracker desktop client from https://Tracker.app/ (or use your organization's binary).
 2. Install it on your user machine.
 
 ## Step 3: Connect the desktop client
@@ -106,10 +106,10 @@ http://172.16.70.66/api
 
 3. Click **Next** or **Verify**.
 
-The client will validate that the server is a Cattr instance and show a login prompt.
+The client will validate that the server is a Tracker instance and show a login prompt.
 
 4. Log in with the test user credentials:
-   - Email: `testuser@cattr.local`
+   - Email: `testuser@Tracker.local`
    - Password: `TestPass#2025!`
 
 5. You should see the test task in the task list.
@@ -156,11 +156,11 @@ The client will validate that the server is a Cattr instance and show a login pr
 
 **Admin (for web UI only):**
 - Email: `admin@tracking.pinnaclemisr.com`
-- Password: `CattrAdmin#2025!`
+- Password: `TrackerAdmin#2025!`
 - Purpose: Create users, projects, tasks, view all reports
 
 **Test user (for desktop client):**
-- Email: `testuser@cattr.local`
+- Email: `testuser@Tracker.local`
 - Password: `TestPass#2025!`
 - Purpose: Track time and see assigned tasks in the desktop app
 

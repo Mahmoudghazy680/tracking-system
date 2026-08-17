@@ -112,7 +112,7 @@ return [
 
     'password_timeout' => 10800,
 
-    'cattr-client-agent' => 'Cattr\-Desktop\/v*',
+    'Tracker-client-agent' => 'Tracker\-Desktop\/v*',
 
     'lifetime_minutes' => [
         'desktop_token' => env('AUTH_DESKTOP_TOKEN_LIFETIME_MINUTES', 10),

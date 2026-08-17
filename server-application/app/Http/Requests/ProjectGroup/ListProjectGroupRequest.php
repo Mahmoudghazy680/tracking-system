@@ -3,10 +3,10 @@
 namespace App\Http\Requests\ProjectGroup;
 
 use App\Helpers\QueryHelper;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\ProjectGroup;
 
-class ListProjectGroupRequest extends CattrFormRequest
+class ListProjectGroupRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

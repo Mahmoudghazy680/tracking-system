@@ -94,7 +94,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'no-reply@cattr.local'),
+        'address' => env('MAIL_FROM_ADDRESS', 'no-reply@Tracker.local'),
         'name' => env('MAIL_FROM_NAME', 'Pin-Tracker'),
     ],
 

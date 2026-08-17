@@ -6,10 +6,10 @@ use App\Enums\ActivityType;
 use App\Helpers\QueryHelper;
 use App\Http\Requests\AuthorizesAfterValidation;
 use App\Models\Task;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Illuminate\Validation\Rule;
 
-class ShowTaskActivityRequest extends CattrFormRequest
+class ShowTaskActivityRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

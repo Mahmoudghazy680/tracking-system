@@ -4,14 +4,14 @@ namespace App\Http\Requests\Interval;
 
 use AllowDynamicProperties;
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\TimeInterval;
 use App\Models\User;
 use App\Rules\TimeIntervalDoesNotExist;
 use Carbon\Carbon;
 use Settings;
 
-#[AllowDynamicProperties] class CreateTimeIntervalRequest extends CattrFormRequest
+#[AllowDynamicProperties] class CreateTimeIntervalRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

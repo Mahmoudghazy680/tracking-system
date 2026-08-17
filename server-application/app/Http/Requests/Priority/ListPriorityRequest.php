@@ -5,9 +5,9 @@ namespace App\Http\Requests\Priority;
 use App\Helpers\QueryHelper;
 use App\Http\Requests\AuthorizesAfterValidation;
 use App\Models\Priority;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class ListPriorityRequest extends CattrFormRequest
+class ListPriorityRequest extends TrackerFormRequest
 {
     use AuthorizesAfterValidation;
 

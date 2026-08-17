@@ -1,4 +1,4 @@
-FROM registry.git.amazingcat.net/cattr/core/app:latest
+FROM registry.git.amazingcat.net/Tracker/core/app:latest
 
 USER root
 

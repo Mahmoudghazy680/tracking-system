@@ -1,10 +1,10 @@
-# Trakcker Deployment Bundle
+# Tracker Deployment Bundle
 
-This workspace contains a first-pass Docker deployment bundle for Cattr using:
+This workspace contains a first-pass Docker deployment bundle for Tracker using:
 
 - tracking.pinnaclemisr.com
 - 172.16.70.66
-- official prebuilt Cattr app image
+- official prebuilt Tracker app image
 - Percona 8.0
 
 ## Files

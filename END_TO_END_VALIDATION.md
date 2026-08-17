@@ -1,6 +1,6 @@
 # End-to-End Validation Checklist
 
-Use this checklist to confirm your Cattr deployment is fully functional, from server setup through first report generation.
+Use this checklist to confirm your Tracker deployment is fully functional, from server setup through first report generation.
 
 ## Phase 1: Server Deployment ✅
 
@@ -10,17 +10,17 @@ Use this checklist to confirm your Cattr deployment is fully functional, from se
 - [x] MySQL internal port 3306 is not exposed
 - [x] Bind mounts created: `./storage` and `./data`
 - [x] Percona database running and healthy
-- [x] Cattr app container running
+- [x] Tracker app container running
 - [x] Migrations and seeders completed on startup
 - [x] Admin user created automatically: `admin@tracking.pinnaclemisr.com`
 
 ## Phase 2: Web UI Access ✅
 
-**Checkpoint:** Browser can access the Cattr login page.
+**Checkpoint:** Browser can access the Tracker login page.
 
 - [x] Open http://172.16.70.66 in a browser
-- [x] Cattr login page loads
-- [x] Admin login works with: `admin@tracking.pinnaclemisr.com` / `CattrAdmin#2025!`
+- [x] Tracker login page loads
+- [x] Admin login works with: `admin@tracking.pinnaclemisr.com` / `TrackerAdmin#2025!`
 - [x] After login, admin dashboard appears
 - [x] Navigation menu shows: Users, Projects, Tasks, Time Intervals, Reports, Settings
 
@@ -55,7 +55,7 @@ Use this checklist to confirm your Cattr deployment is fully functional, from se
 - [ ] Click **Users** → **+ New User**
 - [ ] Create user:
   - Full Name: `Test User`
-  - Email: `testuser@cattr.local`
+  - Email: `testuser@Tracker.local`
   - Password: `TestPass#2025!`
 - [ ] Save the user
 - [ ] Confirm user appears in the user list
@@ -82,21 +82,21 @@ Use this checklist to confirm your Cattr deployment is fully functional, from se
 
 ## Phase 6: Desktop Client Installation
 
-**Checkpoint:** Official Cattr desktop client installed on a user machine.
+**Checkpoint:** Official Tracker desktop client installed on a user machine.
 
-- [ ] Download desktop client from https://cattr.app/download
+- [ ] Download desktop client from https://Tracker.app/download
 - [ ] Install on user machine (Windows, macOS, or Linux)
 - [ ] Launch the application
 
 ## Phase 7: Desktop Client Connection
 
-**Checkpoint:** Desktop client successfully connects to the Cattr server.
+**Checkpoint:** Desktop client successfully connects to the Tracker server.
 
 - [ ] Client prompts for server URL on first launch
 - [ ] Enter exactly: `http://172.16.70.66/api` (with `/api` suffix)
 - [ ] Client validates the server
 - [ ] Client shows login prompt
-- [ ] Log in with test user: `testuser@cattr.local` / `TestPass#2025!`
+- [ ] Log in with test user: `testuser@Tracker.local` / `TestPass#2025!`
 - [ ] After login, task list appears
 - [ ] **Sample Task** is visible in the task list
 - [ ] Task status shows "Assigned"
@@ -187,7 +187,7 @@ Use this checklist to confirm your Cattr deployment is fully functional, from se
 
 **Checkpoint:** Confirm setup works with multiple users.
 
-- [ ] Create a second test user (e.g., `anotheruser@cattr.local`)
+- [ ] Create a second test user (e.g., `anotheruser@Tracker.local`)
 - [ ] Create a different task and assign it to the second user
 - [ ] Install the desktop client on another machine (or use the same machine with a different user account)
 - [ ] Connect the desktop client to http://172.16.70.66/api
@@ -221,7 +221,7 @@ Use this checklist to confirm your Cattr deployment is fully functional, from se
 
 - [ ] MySQL port 3306 is NOT exposed to host network
 - [ ] Only ports 22 (SSH) and 80 (HTTP) are open in UFW
-- [ ] Admin password is strong and unique: `CattrAdmin#2025!`
+- [ ] Admin password is strong and unique: `TrackerAdmin#2025!`
 - [ ] Test user password is strong: `TestPass#2025!`
 - [ ] `.env` file contains no placeholder values
 - [ ] `.env` file is NOT committed to version control
@@ -251,7 +251,7 @@ Use this checklist to confirm your Cattr deployment is fully functional, from se
 
 ## 🎉 Complete!
 
-If you have checked all boxes, your Cattr deployment is **fully functional and ready for production use**.
+If you have checked all boxes, your Tracker deployment is **fully functional and ready for production use**.
 
 ### Next Recommended Actions
 
@@ -284,4 +284,4 @@ If you have checked all boxes, your Cattr deployment is **fully functional and r
    - Document how to archive old projects
    - Plan database maintenance (cleanup old time intervals if needed)
 
-Congratulations! You now have a working Cattr self-hosted instance. 🎊
+Congratulations! You now have a working Tracker self-hosted instance. 🎊

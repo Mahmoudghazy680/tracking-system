@@ -7,7 +7,7 @@ use App\Helpers\StorageCleaner;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:screenshots:rotate')]
+#[AsCommand(name: 'Tracker:screenshots:rotate')]
 class RotateScreenshots extends Command
 {
     /**
@@ -15,7 +15,7 @@ class RotateScreenshots extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:screenshots:rotate';
+    protected $signature = 'Tracker:screenshots:rotate';
 
     /**
      * The console command description.

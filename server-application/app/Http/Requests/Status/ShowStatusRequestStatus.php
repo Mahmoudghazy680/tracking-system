@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\Status;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Status;
 
-class ShowStatusRequestStatus extends CattrFormRequest
+class ShowStatusRequestStatus extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

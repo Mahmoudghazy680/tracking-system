@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests\ProjectGroup;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\ProjectGroup;
 
-class CreateProjectGroupRequest extends CattrFormRequest
+class CreateProjectGroupRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

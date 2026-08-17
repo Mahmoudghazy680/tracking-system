@@ -6,7 +6,7 @@ use App\Helpers\Version;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Attribute\AsCommand;
 
-#[AsCommand(name: 'cattr:version')]
+#[AsCommand(name: 'Tracker:version')]
 class VersionCommand extends Command
 {
     /**
@@ -14,14 +14,14 @@ class VersionCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'cattr:version';
+    protected $signature = 'Tracker:version';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Get Cattr version';
+    protected $description = 'Get Tracker version';
 
     /**
      * Execute the console command.

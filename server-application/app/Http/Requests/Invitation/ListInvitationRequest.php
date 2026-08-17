@@ -3,10 +3,10 @@
 namespace App\Http\Requests\Invitation;
 
 use App\Helpers\QueryHelper;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use App\Models\Invitation;
 
-class ListInvitationRequest extends CattrFormRequest
+class ListInvitationRequest extends TrackerFormRequest
 {
     /**
      * Determine if user authorized to make this request.

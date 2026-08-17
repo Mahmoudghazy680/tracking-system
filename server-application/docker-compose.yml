@@ -17,7 +17,7 @@ services:
   db:
     image: percona:8.0
     environment:
-      - MYSQL_DATABASE=cattr
+      - MYSQL_DATABASE=Tracker
       - MYSQL_ROOT_PASSWORD=password
     cap_add:
       - SYS_NICE

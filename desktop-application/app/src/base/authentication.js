@@ -133,7 +133,7 @@ const buildWindowsAuthUrl = () => {
 module.exports.getSSOFromProtocol = args => {
 
   // Trying to extract SSO URL by protocol+action preamble
-  let ssoUrl = Array.from(args || process.argv).filter(arg => arg.indexOf('cattr://authenticate') === 0);
+  let ssoUrl = Array.from(args || process.argv).filter(arg => arg.indexOf('Tracker://authenticate') === 0);
   if (!ssoUrl || ssoUrl.length === 0)
     return null;
 
@@ -163,14 +163,14 @@ module.exports.getSSOFromProtocol = args => {
 };
 
 /**
- * Checks is this is Cattr API instance
- * @return {Promise<Boolean>} True, if it's working Cattr instance, False otherwise
+ * Checks is this is Tracker API instance
+ * @return {Promise<Boolean>} True, if it's working Tracker instance, False otherwise
  */
-module.exports.isCattrInstance = async () => {
+module.exports.isTrackerInstance = async () => {
 
   try {
 
-    return await api.isCattrInstance();
+    return await api.isTrackerInstance();
 
   } catch (err) {
 

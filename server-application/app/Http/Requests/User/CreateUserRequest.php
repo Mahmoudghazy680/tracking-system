@@ -5,11 +5,11 @@ namespace App\Http\Requests\User;
 use App\Enums\Role;
 use App\Enums\ScreenshotsState;
 use App\Models\User;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Illuminate\Validation\Rules\Enum;
 use Illuminate\Validation\Rule;
 
-class CreateUserRequest extends CattrFormRequest
+class CreateUserRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

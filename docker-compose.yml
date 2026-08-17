@@ -1,6 +1,6 @@
 services:
   app:
-    image: cattr-custom:software-usage
+    image: Tracker-custom:software-usage
     restart: unless-stopped
     env_file:
       - ./.env

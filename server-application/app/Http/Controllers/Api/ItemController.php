@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Filter;
 use App\Helpers\QueryHelper;
 use App\Http\Controllers\Controller;
@@ -130,7 +130,7 @@ abstract class ItemController extends Controller
      *  {
      *      "id": 1,
      *      "full_name": "Admin",
-     *      "email": "admin@cattr.app",
+     *      "email": "admin@Tracker.app",
      *      "url": "",
      *      "company_id": 1,
      *      "avatar": "",
@@ -451,7 +451,7 @@ abstract class ItemController extends Controller
     /**
      * @throws Exception
      */
-    public function _index(CattrFormRequest $request): JsonResponse
+    public function _index(TrackerFormRequest $request): JsonResponse
     {
         $requestData = Filter::process(Filter::getRequestFilterName(), $request->validated());
 
@@ -507,7 +507,7 @@ abstract class ItemController extends Controller
     /**
      * @throws Throwable
      */
-    public function _create(CattrFormRequest $request): JsonResponse
+    public function _create(TrackerFormRequest $request): JsonResponse
     {
         $requestData = Filter::process(Filter::getRequestFilterName(), $request->validated());
 
@@ -529,7 +529,7 @@ abstract class ItemController extends Controller
     /**
      * @throws Throwable
      */
-    public function _edit(CattrFormRequest $request): JsonResponse
+    public function _edit(TrackerFormRequest $request): JsonResponse
     {
         $requestData = Filter::process(Filter::getRequestFilterName(), $request->validated());
 
@@ -561,7 +561,7 @@ abstract class ItemController extends Controller
     /**
      * @throws Throwable
      */
-    public function _destroy(CattrFormRequest $request): JsonResponse
+    public function _destroy(TrackerFormRequest $request): JsonResponse
     {
         $requestId = Filter::process(Filter::getRequestFilterName(), $request->validated('id'));
 
@@ -595,7 +595,7 @@ abstract class ItemController extends Controller
     /**
      * @throws Exception
      */
-    protected function _count(CattrFormRequest $request): JsonResponse
+    protected function _count(TrackerFormRequest $request): JsonResponse
     {
         $requestData = Filter::process(Filter::getRequestFilterName(), $request->validated());
 
@@ -613,7 +613,7 @@ abstract class ItemController extends Controller
     /**
      * @throws Throwable
      */
-    protected function _show(CattrFormRequest $request): JsonResponse
+    protected function _show(TrackerFormRequest $request): JsonResponse
     {
         $requestData = Filter::process(Filter::getRequestFilterName(), $request->validated());
 

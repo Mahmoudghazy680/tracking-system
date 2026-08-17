@@ -1,13 +1,13 @@
 @use "sass:math";
-@import "~@cattr/ui-kit/src/stylesheet/src/mixins/index";
-@import "~@cattr/ui-kit/src/stylesheet/src/variables/timing-function";
+@import "~@Tracker/ui-kit/src/stylesheet/src/mixins/index";
+@import "~@Tracker/ui-kit/src/stylesheet/src/variables/timing-function";
 
 $heading-font-family: 'Nunito', sans-serif;
 
 /* Prefix */
 $css-prefix: at;
 
-/* Cattr Color Palette */
+/* Tracker Color Palette */
 $blue-1                     : #2E2EF9;
 $blue-2                     : #6C6CFF;
 $blue-3                     : #F4F4FF;

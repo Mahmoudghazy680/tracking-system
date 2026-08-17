@@ -12,7 +12,7 @@ export function getLangCookie() {
     return v ? v[2] : null;
 }
 
-// Set root domain cookie, ex: *.cattr.app
+// Set root domain cookie, ex: *.Tracker.app
 export function setLangCookie(lang) {
     const rootDomain = location.hostname.split('.').reverse().splice(0, 2).reverse().join('.');
     document.cookie = 'lang=' + lang + '; domain=' + rootDomain;

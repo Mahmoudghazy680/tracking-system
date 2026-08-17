@@ -3,12 +3,12 @@
 namespace App\Http\Requests\Interval;
 
 use App\Http\Requests\AuthorizesAfterValidation;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Validation\Rules\File;
 use Str;
 
-class UploadOfflineIntervalsRequest extends CattrFormRequest
+class UploadOfflineIntervalsRequest extends TrackerFormRequest
 {
 
     public function _authorize(): bool
@@ -24,7 +24,7 @@ class UploadOfflineIntervalsRequest extends CattrFormRequest
                 File::types('application/zip')->max(12 * 1024),
                 function ($_, UploadedFile $file, $fail) {
                     $fileName = $file->getClientOriginalName();
-                    if (Str::endsWith($fileName, '.cattr') === false) {
+                    if (Str::endsWith($fileName, '.Tracker') === false) {
                         $fail('validation.offline-sync.wrong_extension')->translate();
                     }
                 }

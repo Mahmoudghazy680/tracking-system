@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Create test data for Cattr end-to-end validation
+# Create test data for Tracker end-to-end validation
 # Simplified version that works with the current API
 
 API_BASE="http://127.0.0.1"
 ADMIN_EMAIL="admin@tracking.pinnaclemisr.com"
-ADMIN_PASSWORD="CattrAdmin#2025!"
+ADMIN_PASSWORD="TrackerAdmin#2025!"
 
-TEST_USER_EMAIL="testuser@cattr.local"
+TEST_USER_EMAIL="testuser@Tracker.local"
 TEST_USER_PASSWORD="TestPass#2025!"
 TEST_USER_NAME="Test User"
 
 PROJECT_NAME="Test Project"
 TASK_NAME="Sample Task"
 
-echo "=== Creating Cattr test data ==="
+echo "=== Creating Tracker test data ==="
 echo
 
 # Step 1: Admin login
@@ -138,7 +138,7 @@ echo "  Project ID:       $PROJECT_ID ($PROJECT_NAME)"
 echo "  Task ID:          $TASK_ID ($TASK_NAME)"
 echo
 echo "Next steps:"
-echo "  1. Install the official Cattr desktop client"
+echo "  1. Install the official Tracker desktop client"
 echo "  2. When asked for server URL, enter: http://172.16.70.66/api"
 echo "  3. Log in with:"
 echo "     Email:    $TEST_USER_EMAIL"

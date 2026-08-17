@@ -4,9 +4,9 @@ namespace App\Http\Requests\User;
 
 use App\Helpers\QueryHelper;
 use App\Models\User;
-use App\Http\Requests\CattrFormRequest;
+use App\Http\Requests\TrackerFormRequest;
 
-class ListUsersRequest extends CattrFormRequest
+class ListUsersRequest extends TrackerFormRequest
 {
     public function _authorize(): bool
     {

@@ -1,16 +1,16 @@
 {
-  "name": "@cattr/frontend-application",
+  "name": "@Tracker/frontend-application",
   "author": "team@amazingcat.net",
-  "homepage": "https://cattr.app",
+  "homepage": "https://Tracker.app",
   "bugs": {
-    "url": "https://git.amazingcat.net/cattr/core/app/-/issues",
-    "email": "hi@cattr.app"
+    "url": "https://git.amazingcat.net/Tracker/core/app/-/issues",
+    "email": "hi@Tracker.app"
   },
   "license": "SSPL-1.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://git.amazingcat.net/cattr/core/app.git"
+    "url": "https://git.amazingcat.net/Tracker/core/app.git"
   },
   "scripts": {
     "dev": "mix",
@@ -25,9 +25,9 @@
     "resources/frontend/vendor_modules/*/*"
   ],
   "dependencies": {
-    "@cattr/gitlab-integration": "^2.0.4",
-    "@cattr/redmine-integration": "^4.0.4",
-    "@cattr/ui-kit": "^1.3.9",
+    "@Tracker/gitlab-integration": "^2.0.4",
+    "@Tracker/redmine-integration": "^4.0.4",
+    "@Tracker/ui-kit": "^1.3.9",
     "@sentry/tracing": "^7.93.0",
     "@sentry/vue": "^7.93.0",
     "@svgdotjs/svg.js": "^3.2.0",
