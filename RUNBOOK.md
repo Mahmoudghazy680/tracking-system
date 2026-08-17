@@ -1,4 +1,4 @@
-# Cattr VM Deployment Runbook
+# Tracker VM Deployment Runbook
 
 This package deploys Cattr to a single Ubuntu VM using Docker, the official prebuilt Cattr app image, and Percona 8.0.
 
