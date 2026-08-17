@@ -1,4 +1,4 @@
-# Cattr Quickstart Setup
+# Tracker Quickstart Setup
 
 Your Cattr server is running at **http://172.16.70.66**.
 
